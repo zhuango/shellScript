@@ -1,0 +1,8 @@
+#!/bin/bash
+name=`ls | grep ".jpg" | sed 's/.jpg//g'`;
+for file in $name
+do
+	if [ $file -gt "50" ]; then
+		rm $file.jpg;
+	fi
+done
